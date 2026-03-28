@@ -1,0 +1,36 @@
+<header class="header">
+  <div class="header-grid">
+    <div class="logo-section">
+      <img
+        src="assets/grazioso_salvare_logo.png"
+        alt="Grazioso Salvare Logo"
+        class="logo"
+      />
+    </div>
+
+    <div class="hero-section">
+      <img
+        src="assets/dog_rescue.jpg"
+        alt="Dog rescue"
+        class="hero-image"
+      />
+    </div>
+
+    <div class="right-section">
+      <div class="title-row">
+        <h1>Grazioso Salvare Dashboard</h1>
+        <p>Animal Outcomes & Rescue Classification</p>
+      </div>
+
+      <div class="controls-row">
+        <label for="rescueType">Select Rescue Type:</label>
+        <select id="rescueType" (change)="onRescueTypeChange($event)">
+          <option value="">All Animals</option>
+          <option value="WATER">Water Rescue</option>
+          <option value="MOUNTAIN">Mountain Rescue</option>
+          <option value="DISASTER">Disaster Rescue</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</header>

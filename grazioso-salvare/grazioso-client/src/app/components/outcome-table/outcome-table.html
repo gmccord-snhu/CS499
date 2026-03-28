@@ -1,0 +1,51 @@
+<p>Total Records: <strong>{{ outcomes.length || 0 }}</strong></p>
+
+<table border="1" style="width: 100%; border-collapse: collapse;">
+  <thead>
+    <tr style="background-color: #f4f4f4; text-align: left;">
+      <th>ID</th>
+      <th>Intake Date</th>
+      <th>Outcome Date</th>
+      <th>Animal ID</th>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Sex</th>
+      <th>S/N</th>
+      <th>Primary Breed</th>
+      <th>Primary Color</th>
+      <th>Secondary Color</th>
+      <th>Age (Weeks)</th>
+      <th>Status</th>
+      <th>Days</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr
+        *ngFor="let item of outcomes"
+        (click)="selectRow(item)"
+        [class.selected-row]="item._id === selectedRow?._id"
+        style="cursor: pointer;"
+      >
+      <td>{{ item.ID || 'N/A' }}</td>
+      <td>{{ item['Intake Date'] | date:'shortDate' }}</td>
+      <td>{{ item['Outcome Date'] | date:'shortDate' }}</td>
+      <td>{{ item['Animal ID'] || 'N/A' }}</td>
+      <td>{{ item.Name || 'N/A' }}</td>
+      <td>{{ item.Type || 'N/A' }}</td>
+      <td>{{ item.Sex || 'N/A' }}</td>
+      <td>{{ item['Spayed/Neutered'] || 'N/A' }}</td>
+      <td>{{ item['Primary Breed'] || 'N/A' }}</td>
+      <td>{{ item['Primary Color'] || 'N/A' }}</td>
+      <td>{{ item['Secondary Color'] || '—' }}</td>
+      <td>{{ item['calculatedAgeWeeks'] || 'N/A' }}</td>
+      <td>{{ item['Outcome Status'] || 'N/A' }}</td>
+      <td>{{ item['Days in Shelter'] || 'N/A' }}</td>
+    </tr>
+
+    <tr *ngIf="outcomes.length === 0">
+      <td colspan="17" style="text-align: center; padding: 20px;">
+        No records found. Check MongoDB connection!
+      </td>
+    </tr>
+  </tbody>
+</table>

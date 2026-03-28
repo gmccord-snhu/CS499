@@ -1,0 +1,16 @@
+<app-header
+  (rescueTypeSelected)="onRescueTypeSelected($event)">
+</app-header>
+
+<div class="content-layout">
+  <div class="table-wrapper">
+    <app-outcome-table
+      [selectedRescueType]="selectedRescueType"
+      (rowSelected)="onRowSelected($event)">
+    </app-outcome-table>
+  </div>
+
+  <div class="map-wrapper">
+    <app-map [selectedAnimal]="selectedAnimal"></app-map>
+  </div>
+</div>
