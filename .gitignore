@@ -37,3 +37,22 @@ coverage/
 # temp files
 tmp/
 temp/
+
+# Gradle
+.gradle/
+build/
+*/build/
+
+# IDE (Android Studio / IntelliJ)
+.idea/
+*.iml
+
+# Local config
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Gradle wrapper (keep wrapper files, ignore cache)
+.gradle/
