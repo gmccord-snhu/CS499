@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    File: dialog_edit_item.xml
+    Author: Grant McCord
+    Class: CS 360 – Mobile App Development
+    Date: 2025-12-13
+    Purpose: Layout file for adding or editing inventory items via MaterialAlertDialogBuilder.
+             This layout contains:
+             - TextInputEditText for item name
+             - TextInputEditText for item quantity
+             - Shared layout for Add / Edit modes with dynamic Save / Cancel / Remove buttons
+    Notes:
+    - Originally, a dedicated DialogFragment was planned for editing items, and a
+      separate dialog for removing items. Refactoring allowed a single reusable layout.
+    - MaterialAlertDialogBuilder dynamically attaches buttons based on the mode (Add vs Edit).
+-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Item Name">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Quantity"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edit_item_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    File: menu_sms_badge_layout.xml
+    Author: Grant McCord
+    Class: CS 360 – Mobile App Development
+    Date: 2025-12-13
+    Purpose: Layout for the SMS icon and badge used in the app toolbar.
+             This layout contains:
+             - An ImageView representing the SMS icon.
+             - A TextView used as a badge to display the number of unread SMS notifications.
+    Notes:
+    - Badge visibility is toggled programmatically based on notification count.
+    - Designed for use as a custom action layout in a toolbar menu item.
+    - Padding and size constraints fixed layout issues in toolbar.
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingEnd="12dp"
+    android:paddingStart="4dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="4dp">
+
+    <!-- SMS Icon -->
+    <ImageView
+        android:id="@+id/icon_sms"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/sms"
+        android:contentDescription="SMS"
+        app:tint="?attr/colorSecondary" />
+
+    <!-- Badge -->
+    <TextView
+        android:id="@+id/sms_badge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/badge_background"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:minWidth="16dp"
+        android:padding="2dp"
+        android:gravity="center"
+        android:layout_gravity="top|end"
+        android:text="0"
+        android:visibility="gone"/>
+</FrameLayout>
