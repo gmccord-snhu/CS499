@@ -17,9 +17,29 @@
     </div>
 
     <div class="right-section">
-      <div class="title-row">
-        <h1>Grazioso Salvare Dashboard</h1>
-        <p>Animal Outcomes & Rescue Classification</p>
+
+      <div class="top-row">
+        <div class="title-row">
+          <h1>Grazioso Salvare Dashboard</h1>
+          <p>Animal Outcomes & Rescue Classification</p>
+        </div>
+
+        <div class="auth-row">
+          <div *ngIf="!auth.isAdmin" class="login-form">
+            <input [(ngModel)]="username" name="username" placeholder="Username" />
+            <input [(ngModel)]="password" name="password" type="password" placeholder="Password" />
+            <button type="button" (click)="login()">Login</button>
+
+            <div *ngIf="loginError" class="login-error">
+              {{ loginError }}
+            </div>
+          </div>
+
+          <div *ngIf="auth.isAdmin" class="admin-info">
+            <span>Admin</span>
+            <button (click)="logout()">Logout</button>
+          </div>
+        </div>
       </div>
 
       <div class="controls-row">
@@ -31,6 +51,23 @@
           <option value="DISASTER">Disaster Rescue</option>
         </select>
       </div>
+
+      <div class="controls-row">
+        <label for="animalIdSearch">Find Animal ID:</label>
+        <input
+          id="animalIdSearch"
+          type="text"
+          [(ngModel)]="animalIdSearch"
+          (input)="onSearchInputChange()"
+          placeholder="Enter ID"
+        />
+        <button (click)="findAnimalById()">Find</button>
+      </div>
+
+      <div *ngIf="searchError" class="search-error">
+        {{ searchError }}
+      </div>
+
     </div>
   </div>
 </header>

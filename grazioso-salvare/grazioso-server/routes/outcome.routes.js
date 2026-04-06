@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Outcome = require('../models/outcome.model');
+const { requireAdmin } = require('../middleware/auth');
+const { calculateAgeInWeeks } = require('../utils/age-utils');
 
 // Create
 router.post('/', async (req, res) => {
@@ -16,8 +18,21 @@ router.post('/', async (req, res) => {
 // Read all
 router.get('/', async (req, res) => {
   try {
-    const outcomes = await Outcome.find({}).limit(50);
-    res.json(outcomes);
+    const outcomes = await Outcome.find({}).limit(1000);
+
+    const withAge = outcomes.map((animal) => {
+      const ageWeeks = calculateAgeInWeeks(
+        animal['Date of Birth'],
+        animal['Outcome Date']
+      );
+
+      return {
+        ...animal.toObject(),
+        calculatedAgeWeeks: ageWeeks
+      };
+    });
+
+    res.json(withAge);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -39,7 +54,7 @@ router.get('/:id', async (req, res) => {
 });
 
 // Update
-router.put('/:id', async (req, res) => {
+router.put('/:id', requireAdmin, async (req, res) => {
   try {
     const updatedOutcome = await Outcome.findByIdAndUpdate(
       req.params.id,
@@ -58,7 +73,7 @@ router.put('/:id', async (req, res) => {
 });
 
 // Delete
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', requireAdmin, async (req, res) => {
   try {
     const deletedOutcome = await Outcome.findByIdAndDelete(req.params.id);
 

@@ -1,0 +1,21 @@
+<app-header
+  [animals]="animals"
+  (animalSelected)="onRowSelected($event)"
+  (rescueTypeSelected)="onRescueTypeSelected($event)"
+  (searchId)="onSearchId($event)">
+</app-header>
+
+<div class="content-layout">
+  <div class="table-wrapper">
+    <app-outcome-table
+      [selectedRescueType]="selectedRescueType"
+      [searchId]="searchId"
+      (rowSelected)="onRowSelected($event)"
+      (animalsLoaded)="onAnimalsLoaded($event)">
+    </app-outcome-table>
+  </div>
+
+  <div class="map-wrapper">
+    <app-map [selectedAnimal]="selectedAnimal"></app-map>
+  </div>
+</div>

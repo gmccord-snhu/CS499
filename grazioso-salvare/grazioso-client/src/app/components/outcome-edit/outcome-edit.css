@@ -1,0 +1,112 @@
+.edit-page {
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  padding: 30px 20px;
+}
+
+.edit-card {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: white;
+  border: 3px solid #b71c1c;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.edit-header {
+  background-color: #b71c1c;
+  color: white;
+  padding: 16px 20px;
+}
+
+.edit-header h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.edit-header p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+}
+
+.loading-state {
+  padding: 20px;
+  font-weight: 600;
+  color: #333;
+}
+
+.edit-form {
+  padding: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #b71c1c;
+  box-shadow: 0 0 0 2px rgba(183, 28, 28, 0.15);
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.save-btn,
+.cancel-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.save-btn {
+  background-color: #b71c1c;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #8f1515;
+}
+
+.cancel-btn {
+  background-color: #ddd;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background-color: #c7c7c7;
+}
+
+@media (max-width: 700px) {
+  .edit-page {
+    padding: 20px 12px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+}

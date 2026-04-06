@@ -1,4 +1,4 @@
-<p>Total Records: <strong>{{ outcomes.length || 0 }}</strong></p>
+<p>Total Records: <strong>{{ filteredOutcomes.length || 0 }}</strong></p>
 
 <table border="1" style="width: 100%; border-collapse: collapse;">
   <thead>
@@ -17,15 +17,20 @@
       <th>Age (Weeks)</th>
       <th>Status</th>
       <th>Days</th>
+      <th *ngIf="auth.isAdmin$ | async">Actions</th>
     </tr>
   </thead>
   <tbody>
-      <tr
-        *ngFor="let item of outcomes"
-        (click)="selectRow(item)"
-        [class.selected-row]="item._id === selectedRow?._id"
-        style="cursor: pointer;"
-      >
+    <tr
+      *ngFor="let item of filteredOutcomes"
+      (click)="selectRow(item)"
+      [class.selected-row]="
+        item._id === selectedRow?._id ||
+        item['Animal ID'] === selectedRow?.['Animal ID'] ||
+        item.ID === selectedRow?.ID
+      "
+      style="cursor: pointer;"
+    >
       <td>{{ item.ID || 'N/A' }}</td>
       <td>{{ item['Intake Date'] | date:'shortDate' }}</td>
       <td>{{ item['Outcome Date'] | date:'shortDate' }}</td>
@@ -40,10 +45,16 @@
       <td>{{ item['calculatedAgeWeeks'] || 'N/A' }}</td>
       <td>{{ item['Outcome Status'] || 'N/A' }}</td>
       <td>{{ item['Days in Shelter'] || 'N/A' }}</td>
+
+      <td *ngIf="auth.isAdmin$ | async">
+        <button type="button" (click)="editOutcome(item); $event.stopPropagation()">
+          Edit
+        </button>
+      </td>
     </tr>
 
-    <tr *ngIf="outcomes.length === 0">
-      <td colspan="17" style="text-align: center; padding: 20px;">
+    <tr *ngIf="filteredOutcomes.length === 0">
+      <td [attr.colspan]="(auth.isAdmin$ | async) ? 15 : 14" style="text-align: center; padding: 20px;">
         No records found. Check MongoDB connection!
       </td>
     </tr>
