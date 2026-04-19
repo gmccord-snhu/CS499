@@ -60,8 +60,15 @@ I also added a reports page to provide a visual overview of the inventory data. 
 ![Dashboard](images/inv_app_reports.jpg)
 
 ### Reflection
-Working on this enhancement helped reinforce the importance of designing applications with the user in mind. One challenge was ensuring that the new features integrated cleanly with the existing code without breaking functionality. Through this process, I improved my ability to modify and extend existing applications.
+Working on the Android Inventory App enhancement gave me a better appreciation for what it takes to improve an existing application instead of simply building one from scratch. It is often easier to create a new project than to step back into older code, understand previous design decisions, and carefully extend it without breaking existing functionality. Through this process, I learned the importance of maintainable code structure, clear organization, and planning ahead for future changes. I also gained more experience working with Android activities, navigation, layouts, and connecting interface changes to the underlying data layer.
 
+One of the biggest challenges was integrating the new features cleanly into the application. Adding stock status classification required updating how inventory quantities were interpreted and displayed throughout the app. The sorting functionality also required changes to how records were retrieved and presented so the user experience remained simple and responsive. Another challenge was creating the reports page and connecting chart data to the inventory records in a meaningful way. I had to think not only as a programmer, but also as an end user who needed quick access to useful information.
+
+As I worked through these issues, I relied heavily on testing and iterative improvements. Small changes were made, tested, and refined until the application behaved as expected. Feedback from the course and from reviewing the project requirements helped guide these improvements. Rather than adding features just for complexity, I focused on changes that made the application more practical and easier to use.
+
+The artifact was improved significantly from the original version. It moved beyond a basic inventory tracker into a more complete application that provides better organization, clearer stock visibility, and useful reporting tools. These enhancements made the project feel closer to something that could be used in a real workplace environment.
+
+Through this work, I met the outcome of designing and evaluating computing solutions that solve a given problem using algorithmic principles and computer science practices, while balancing trade-offs in design choices such as usability, structure, and functionality. I also met the outcome of demonstrating the ability to use well-founded and innovative techniques, skills, and tools in computing practices to implement solutions that deliver value and accomplish industry-specific goals. While no project covers every possible outcome equally, this artifact strongly supported the software design and engineering goals of the program
 ---
 
 ## Algorithms and Data Structures: Grazioso Salvare MEAN Stack Enhancement
@@ -111,7 +118,15 @@ I expanded the database functionality by implementing CRUD operations, adding AP
 These enhancements allowed the application to support more complex interactions with the database and improved overall functionality.
 
 ### Reflection
-Overall, these enhancements show a deeper understanding of how the database layer works within a full-stack application. Instead of just reading data, the application now supports retrieving specific records and updating them, which better reflects real-world use cases.
+The Grazioso Salvare MEAN stack enhancement was one of the most valuable projects in my capstone because it required bringing together multiple technologies into one working system. Unlike a smaller assignment focused on only one language or concept, this project required the frontend, backend, and database layers to communicate correctly. That integration process gave me a stronger understanding of how modern web applications are structured and how each layer depends on the others.
+
+One of the biggest lessons I learned was how important architecture and planning are in full-stack development. Decisions made in the database schema affected the API design, and API decisions affected the Angular frontend. I also learned that debugging in a multi-layer application is very different from debugging a standalone program. A problem might come from the frontend request, backend routing, server logic, or database query, so troubleshooting required patience and a step-by-step process.
+
+There were several challenges during development. Getting the server and client connected correctly took time, especially with routing, CORS configuration, and making sure data was returned in the expected format. I also wanted to preserve important features from the original dashboard, such as sorting, row highlighting, and map updates, while redesigning the project into a single-page web application. Later enhancements such as login functionality, record editing, and reporting pages required additional changes across multiple layers of the system.
+
+The artifact was greatly improved from the original version. It evolved from a classroom dashboard into a more complete full-stack application with stronger separation of concerns, better user interaction, expandable features, and real database integration. It demonstrates a much deeper understanding of software engineering than the original project alone.
+
+This enhancement strongly supported multiple course outcomes. It demonstrated my ability to design and evaluate computing solutions using algorithmic principles and sound computer science practices while balancing trade-offs in design choices. It also showed my ability to use modern tools and technologies by integrating MongoDB, Express, Angular, and Node.js into one working solution that delivers practical value. Through project documentation and presentation, it supported professional written and visual communication. By creating a dashboard intended to present useful data for users and decision making, it also reflected collaborative and organizational goals. Finally, developing the application required a security mindset through consideration of data handling, user access, and secure design practices.
 
 ---
 
