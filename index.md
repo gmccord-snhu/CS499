@@ -18,8 +18,6 @@ This ePortfolio highlights my growth through selected artifacts that I enhanced 
 
 ## Professional Self-Assessment
 
-## Professional Self-Assessment
-
 Completing the Computer Science program and building this ePortfolio gave me the opportunity to reflect on how much I have grown as a developer. I entered the program with a strong background in C++ programming, software validation, and real-world industry experience, but the coursework helped me expand far beyond that foundation. Through the program, I developed practical skills in full-stack web development, mobile application development, database design, software engineering, and secure coding practices. Just as important, the capstone allowed me to organize that growth into a professional portfolio that demonstrates both technical ability and continued adaptability.
 
 One of the biggest strengths highlighted through this portfolio is my ability to learn new technologies and apply them in meaningful ways. While my professional background has centered around C++, this program pushed me into areas that were new to me, including Android development with Java, SQLite database integration, and MEAN stack development using MongoDB, Express, Angular, and Node.js. Learning these technologies showed that I am not limited to one language or platform. Instead, I can transfer core computer science principles across different environments and continue growing as technology changes.
@@ -66,6 +64,7 @@ I also added a reports page to provide a visual overview of the inventory data. 
 ![Dashboard](images/inv_app_reports.jpg)
 
 ### Reflection
+
 Working on the Android Inventory App enhancement gave me a better appreciation for what it takes to improve an existing application instead of simply building one from scratch. It is often easier to create a new project than to step back into older code, understand previous design decisions, and carefully extend it without breaking existing functionality. Through this process, I learned the importance of maintainable code structure, clear organization, and planning ahead for future changes. I also gained more experience working with Android activities, navigation, layouts, and connecting interface changes to the underlying data layer.
 
 One of the biggest challenges was integrating the new features cleanly into the application. Adding stock status classification required updating how inventory quantities were interpreted and displayed throughout the app. The sorting functionality also required changes to how records were retrieved and presented so the user experience remained simple and responsive. Another challenge was creating the reports page and connecting chart data to the inventory records in a meaningful way. I had to think not only as a programmer, but also as an end user who needed quick access to useful information.
@@ -74,7 +73,6 @@ As I worked through these issues, I relied heavily on testing and iterative impr
 
 The artifact was improved significantly from the original version. It moved beyond a basic inventory tracker into a more complete application that provides better organization, clearer stock visibility, and useful reporting tools. These enhancements made the project feel closer to something that could be used in a real workplace environment.
 
-Through this work, I met the outcome of designing and evaluating computing solutions that solve a given problem using algorithmic principles and computer science practices, while balancing trade-offs in design choices such as usability, structure, and functionality. I also met the outcome of demonstrating the ability to use well-founded and innovative techniques, skills, and tools in computing practices to implement solutions that deliver value and accomplish industry-specific goals. While no project covers every possible outcome equally, this artifact strongly supported the software design and engineering goals of the program
 ---
 
 ## Algorithms and Data Structures: Grazioso Salvare MEAN Stack Enhancement
