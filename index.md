@@ -48,6 +48,8 @@ In this code review, I walk through the original functionality of my application
 
 ## Software Design and Engineering: Android Inventory App Enhancement
 
+[Inventory App Project on GitHub](https://github.com/gmccord-snhu/CS499/tree/main/InventoryApp)
+
 ### Artifact Description
 The artifact used for this category is my Android Inventory Application, originally developed as part of my mobile development coursework. The application allows users to manage inventory items, including tracking stock levels and organizing product data.
 
@@ -79,6 +81,8 @@ Through this work, I met the outcome of designing and evaluating computing solut
 
 ## Algorithms and Data Structures: Grazioso Salvare MEAN Stack Enhancement
 
+[Grazioso Salvare Project on GitHub](https://github.com/gmccord-snhu/CS499/tree/main/grazioso-salvare)
+
 ### Artifact Description
 This artifact is a MEAN stack web application based on the Grazioso Salvare project. It uses MongoDB, Express, Angular, and Node.js to manage and display animal rescue data.
 
@@ -99,6 +103,8 @@ This enhancement helped me better understand how data structures and algorithms 
 ---
 
 ## Databases: Grazioso Salvare MEAN Stack Enhancement
+
+[Grazioso Salvare Project on GitHub](https://github.com/gmccord-snhu/CS499/tree/main/grazioso-salvare)
 
 ### Artifact Description
 This artifact is the same MEAN stack application, with a focus on the database layer using MongoDB. The goal of this enhancement was to demonstrate how the application interacts with the database beyond basic data retrieval, and to show a better understanding of full CRUD operations and data flow between the front end and back end.
