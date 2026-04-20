@@ -73,6 +73,8 @@ As I worked through these issues, I relied heavily on testing and iterative impr
 
 The artifact was improved significantly from the original version. It moved beyond a basic inventory tracker into a more complete application that provides better organization, clearer stock visibility, and useful reporting tools. These enhancements made the project feel closer to something that could be used in a real workplace environment.
 
+Through this work, I met the outcome of designing and evaluating computing solutions that solve a given problem using algorithmic principles and computer science practices, while balancing trade-offs in design choices such as usability, structure, and functionality. I also met the outcome of demonstrating the ability to use well-founded and innovative techniques, skills, and tools in computing practices to implement solutions that deliver value and accomplish industry-specific goals. While no project covers every possible outcome equally, this artifact strongly supported the software design and engineering goals of the program.
+
 ---
 
 ## Algorithms and Data Structures: Grazioso Salvare MEAN Stack Enhancement
