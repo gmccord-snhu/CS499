@@ -59,7 +59,17 @@ I selected this artifact because it demonstrates my ability to design and build 
 ### Enhancements Implemented
 The enhancements I made include adding stock status classification and implementing sorting functionality. These changes improved the usability of the application by making it easier to identify inventory levels and organize items efficiently.
 
-![Dashboard](images/inv_app_main.jpg)
+This is the original application panel without sorting implemented and was submitted the CS360 Mobile Development project.
+
+![Dashboard](images/inv_app_before.jpg)
+
+The updated panel shows the addition of status pills for In Stock, Low Stock, and Out of Stock, along with sorting controls added to the top menu.
+
+![Dashboard](images/inv_app_updated_all.jpg)
+
+Sorting buttons at the top can be used to refine the view, matching the status pills and inventory levels.
+
+![Dashboard](images/inv_app_updated_out.jpg)
 
 I also added a reports page to provide a visual overview of the inventory data. This page includes a bar chart that displays the number of items that are in stock, low stock, and out of stock. The goal of this feature was to make it easier to quickly understand inventory trends without needing to scan through individual records.
 
@@ -97,6 +107,8 @@ This project also demonstrates my ability to develop a single-page application (
 ### Enhancements Implemented
 Enhancements included implementing sorting and filtering logic for rescue data, as well as handling aggregated results from the database. These changes improved the efficiency and usability of the application by allowing users to quickly find relevant information.
 
+The original class project for CS 340: Advanced Programming Concepts was a Python Jupyter notebook that focused on database queries and basic dashboard functionality. For the capstone enhancement, I expanded the project into a more complete web application by improving both the front-end user experience and the back-end data handling. This required restructuring the application into a full-stack design using modern web technologies, connecting the interface to database-driven API endpoints, and ensuring data updates were reflected correctly in the user interface.
+
 ### Reflection
 This enhancement helped me better understand how data structures and algorithms are applied in real-world applications. One challenge was ensuring that data was processed efficiently while still keeping the code readable and maintainable.
 
@@ -127,7 +139,7 @@ I selected this artifact because it demonstrates my ability to design and intera
 ### Enhancements Implemented
 I expanded the database functionality by implementing CRUD operations, adding API endpoints to retrieve and update records, and using MongoDB queries and aggregation to process data.
 
-These enhancements allowed the application to support more complex interactions with the database and improved overall functionality.
+I also added a secure administrator login to control access to the edit features. This enhancement introduced basic authentication so only authorized users could access record management functions, demonstrating the importance of access control and user security in a database-driven application.
 
 ### Reflection
 The Grazioso Salvare MEAN stack enhancement was one of the most valuable projects in my capstone because it required bringing together multiple technologies into one working system. Unlike a smaller assignment focused on only one language or concept, this project required the frontend, backend, and database layers to communicate correctly. That integration process gave me a stronger understanding of how modern web applications are structured and how each layer depends on the others.
